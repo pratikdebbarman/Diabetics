@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <h2><title>Diabetics</title></h2>
+
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+
+</head>
+<center>
+<style >
+  body {background-color: #809fff;
+    }
+  h1 {color: black;}
+  k {color: white;}
+  h2 {color:  #990033;}
+  x {color: black;}
+.button {
+  background-color: #3333ff;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <h2>{{ prediction_text }}</h2>  
+
+      <h1>Diabetics Predition</h1>
+ <div class="login">
+  
+   <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict') }}"method="post">
+      <!-- <input type="number" name="area_type" placeholder="area_type" required="required" /> -->
+     
+
+    <x style="font-size:30px;">num preg</x><br>
+  <input type="text" style="width: 400px; height: 20px;" name="num_preg" placeholder="Enter your num preg" required="required" /><br>
+  
+
+    <x style="font-size:30px;">glucose conc</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="glucose conc" placeholder="Enter your glucose conc" required="required" /><br>
+   
+
+    <x style="font-size:30px;">diastolic bp</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="diastolic bp" placeholder="Enter your diastolic bp" required="required" /><br>
+
+    <x style="font-size:30px;">thickness</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="thickness" placeholder="Enter your thickness" required="required" /><br>
+    
+    <x style="font-size:30px;"> insulin </x><br>
+    <input style="width: 400px; height: 20px;" style="width: 400px; height: 20px;" type="text" name="insulin" placeholder="Enter your insulin" required="required" /><br>
+
+    <x style="font-size:30px;">bmi</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="bmi" placeholder="Enter your bmi" required="required" /><br>
+    <x style="font-size:30px;">diab pred</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="diab_pred" placeholder="Enter your diab pred" required="required" /><br>
+
+    <x style="font-size:30px;">age</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="age" placeholder="Enter your age" required="required" /><br>
+
+    <x style="font-size:30px;">skin</x><br>
+    <input style="width: 400px; height: 20px;" type="text" name="skin" placeholder="Enter your skin" required="required" /><br>
+    
+    
+
+        <button class="button" type="submit" ><k>Predict</k></button>
+    </form>
+
+ </div>
+</center>
+</body>
+</html>
