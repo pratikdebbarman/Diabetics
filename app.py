@@ -25,7 +25,7 @@ def predict():
         output='present'
     elif output ==0:
         output='not present'
-    return render_template('index.html', prediction_text='Heart disease is '+output)
+    return render_template('index.html', prediction_text='Diabetes is '+output)
 
 '''
 @app.route('/predict_api',methods=['POST'])
